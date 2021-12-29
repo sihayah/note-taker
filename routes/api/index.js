@@ -13,11 +13,12 @@ function writeNote(body, notesArr) {
     return note;
   };
 
-function deleteNote(notesArr) {
-    const mapped = notesArr.map(function(objs) {
-        return objs.id
+function deleteNote(notesArr, objId) {
+    const mapped = notesArr.map(function(obj) {
+        if(obj.id === objId){
+            console.log(obj)
+        }
     });
-    console.log(mapped)
     // fs.writeFileSync(
     //   path.join(__dirname, '../../db/notes.json'),
     //   JSON.stringify(notesArr, null, 2)
@@ -43,7 +44,7 @@ router.post('/notes', (req, res) => {
 
 router.delete('/notes/:id', (req, res) => {
     console.log('deleting')
-    deleteNote(notes)
+    deleteNote(notes, req.params.id)
 })
 
 module.exports = router;
