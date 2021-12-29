@@ -14,16 +14,18 @@ function writeNote(body, notesArr) {
   };
 
 function deleteNote(notesArr, objId) {
-    const mapped = notesArr.map(function(obj) {
+    notesArr.map(function(obj) {
         if(obj.id === objId){
-            console.log(obj)
+            const index = notesArr.findIndex(item => item === obj);
+            notesArr.splice(index, 1);
+            fs.writeFileSync(
+                path.join(__dirname, '../../db/notes.json'),
+                JSON.stringify(notesArr, null, 2)
+              );
         }
     });
-    // fs.writeFileSync(
-    //   path.join(__dirname, '../../db/notes.json'),
-    //   JSON.stringify(notesArr, null, 2)
-    // );
-    // return note;
+    console.log ("note deleted")
+    return;
   };
 
 router.get('/notes', (req, res) => {
@@ -45,6 +47,7 @@ router.post('/notes', (req, res) => {
 router.delete('/notes/:id', (req, res) => {
     console.log('deleting')
     deleteNote(notes, req.params.id)
+    res.send('note deleted');
 })
 
 module.exports = router;

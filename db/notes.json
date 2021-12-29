@@ -1,22 +1,12 @@
 [
   {
-    "title": "buy groceries",
-    "text": "get produce and protein",
-    "id": "1"
-  },
-  {
-    "title": "clean apt",
-    "text": "sweep kitchen, organize studio",
+    "title": "kitchen",
+    "text": "clean dishes",
     "id": "2"
   },
   {
-    "title": "sort seeds",
-    "text": "package and label freshly dried",
-    "id": "3"
-  },
-  {
-    "title": "laundry",
-    "text": "wash delicates",
+    "title": "hallway",
+    "text": "sweep cobwebs",
     "id": "4"
   }
 ]
