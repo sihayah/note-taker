@@ -1,20 +1,22 @@
-{
-  "notes": [
-    {
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
-      "title": "yyy",
-      "text": "xxyyyyxx"
-    },
-    {
-      "title": "sdfsdaf",
-      "text": "sadfsadf"
-    },
-    {
-      "title": "sdafdasf",
-      "text": "adfgtrhgh"
-    }
-  ]
-}
+[
+  {
+    "title": "Test Title",
+    "text": "Test text"
+  },
+  {
+    "title": "yyewrsdgeasdfty",
+    "text": "xxyyyasdasfdsgdffsadfyxx"
+  },
+  {
+    "title": "geasdfty",
+    "text": "xxyyffsadfyxx"
+  },
+  {
+    "title": "aaa",
+    "text": "bbb"
+  },
+  {
+    "title": "aa111a",
+    "text": "222bbb"
+  }
+]

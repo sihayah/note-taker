@@ -8,10 +8,10 @@ function writeNote(body, notesArr) {
     notesArr.push(note);
     fs.writeFileSync(
       path.join(__dirname, '../../db/notes.json'),
-      JSON.stringify({ notes: notesArr }, null, 2)
+      JSON.stringify(notesArr, null, 2)
     );
     return note;
-  }
+  };
 
 router.get('/notes', (req, res) => {
     console.log('getting...')
@@ -24,7 +24,6 @@ router.get('/notes', (req, res) => {
 
 router.post('/notes', (req, res) => {
     console.log('posting...');
-    // req.body.id = notes.length.toString();
     const note = writeNote(req.body, notes);
     res.json(note);
 });
