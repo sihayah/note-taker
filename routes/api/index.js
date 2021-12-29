@@ -16,7 +16,6 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
     req.body.id = uuidv4();
     console.log(req.body.id)
-    // req.body.id = (notes.length+1).toString();
     console.log('posting...');
     const note = writeNote(req.body, notes);
     res.json(note);
